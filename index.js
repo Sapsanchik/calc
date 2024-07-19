@@ -24,3 +24,36 @@ multiply.onclick = function () {
 division.onclick = function () {
     action = '/';
 };
+
+function calculate(a, b) {
+    let result = null;
+
+    switch (action) {
+        case '+':
+            result = a + b;
+            break;
+        case '-':
+            result = a - b;
+            break;
+        case '*':
+            result = a * b;
+            break;
+        case '/':
+            if (b !== 0) {
+                result = a / b;
+            } else {
+                return 'Error: division by zero';
+            }
+            break;
+        default:
+            return 'Invalid operation';
+    }
+    return result;
+}
+
+submitBtn.onclick = function () {
+    const a = Number(number1.value);
+    const b = Number(number2.value);
+    const result = calculate(a, b);
+    resultElement.textContent = result;
+};
