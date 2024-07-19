@@ -1,0 +1,21 @@
+.container {
+    width: 33%;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: rgb(181, 212, 213);
+}
+
+.result > p {
+    color: rgb(20, 141, 48);
+}
